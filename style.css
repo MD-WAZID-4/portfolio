@@ -264,6 +264,7 @@ sort(v.begin(),v.end());
 
 
 int ans=0;
+int max_ele;
 int c=1;
 for(int i=0;i<v.size-1();i++){
     
@@ -274,6 +275,8 @@ for(int i=0;i<v.size-1();i++){
 
     if(c>ans){
         ans=c;
+        max_ele=v[i];
+
     }
 
     if(v[i]!=v[i+1]){
@@ -285,17 +288,13 @@ for(int i=0;i<v.size-1();i++){
    
 }
 
-if(v[n-2]==v[n-1]){
-    c++;
-
-}
-
-if(c>ans){
-    ans=c;
-}
 
 
-return ans;
+
+return max_ele;
+
+
+
 
 
     /////////
